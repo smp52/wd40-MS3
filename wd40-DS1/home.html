@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="css/styles2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body id="home">
+
+  <div id="page-wrap">
+	<div class="header">
+		<div class="accountman" id="login"></div>
+        <div class="accountman pure-u-1-1" id="signin">
+        <form class="form" id="form1">
+
+          <p class="username pure-u-2-5">
+            <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="username" id="username" /></p>
+            <p class="password pure-u-2-5"><input name="password" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="password" id="password" />
+            </p>
+            <input type="button" class="button_blue pure-u-1-5" id="yikes" value="Login">
+            </form>
+        </div>
+        <div id="logo">
+                        <a href="home.html"><img id="logoimage" src="images/logo.JPG" alt="Logo"></a>
+
+        </div>
+				<nav>
+            <ul class="nav-bar">
+                <li><a href="home.html" class="activeNav">Home</a></li>
+                <li ><a href="adopt.html" >Adopt</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">events</a></li>
+
+            </ul>
+        </nav>
+
+   </div>
+
+
+  <div id="container">
+
+
+        <div class="module mid">
+            <h1></h1>
+        </div>
+
+       <div id="contentsection1">
+		<div id="adoptSection">
+            <h2>Adopt Today</h2>
+            <p>Lorem ipsum dolor amet skateboard seitan bespoke, leggings cornhole microdosing semiotics.
+							Truffaut banh mi blog, bushwick irony four loko edison bulb flannel brunch af church-key mixtape.
+							Asymmetrical knausgaard brooklyn la croix. Meggings narwhal lyft meditation irony cred woke pour-over farm-to-table
+							chicharrones craft beer chartreuse glossier truffaut cliche. Activated charcoal photo booth succulents, wolf tousled normcore
+							fingerstache fashion axe. Keffiyeh before they sold out literally organic, marfa master cleanse synth echo park paleo prism.
+							Literally DIY fixie, hoodie +1 enamel pin williamsburg.</p>
+            <button class="button_blue">Adopt Today</button>
+            <br>
+		</div>
+      </div>
+    </div>
+
+
+
+      <br>
+      <br>
+      <br>
+       <div id="container1">
+		<div id="contentsection2">
+		<div id="featuredCats">
+            <h2>Cat of the Month</h2>
+		    <section class="flat">
+
+            </section>
+		</div>
+
+
+	</div>
+      </div>
+<div class="slideshow-container">
+<div class="slideshow-inner">
+  <div class="mySlides fade">
+
+    <img  src='https://picsum.photos/200/100' alt="sally lightfoot crab"/>
+    <div class="text">Cat 1</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='https://picsum.photos/200/102' alt="fighting nazca boobies"/>
+    <div class="text">Cat 2</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='https://picsum.photos/200/103' alt="otovalo waterfall"/>
+    <div class="text">Cat 3</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='https://picsum.photos/200/104' alt="pelican"/>
+    <div class="text">Cat 4</div>
+  </div>
+
+  </div>
+
+
+  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+
+
+<div style='text-align: center;'>
+  <span class="dot" onclick='currentSlide(1)'></span>
+  <span class="dot" onclick='currentSlide(2)'></span>
+  <span class="dot" onclick='currentSlide(3)'></span>
+  <span class="dot" onclick='currentSlide(4)'></span>
+</div>
+
+</div>
+
+
+<footer>
+    <div class="footer-social pure-u-1-5" >
+        <ul>
+            <li><a href="http://www.facebook.com"><img src='images/facebook-dark.png' /></a></li>
+            <li><a href="http://www.twitter.com"><img src='images/twitter-dark.png' /></a></li>
+            <li><a  href="http://www.instagram.com"><img src='images/instagram-dark.png' /></a></li>
+        </ul>
+    </div>
+    <div class="pure-u-2-5">
+    <h3>This site is not official and is an assignment for a UCF Digital Media course | Copyright 2019 Catapalooza</h3></div>
+    <div class="pure-u-1-5"><h3>Contact</h3></div>
+
+</footer>
+
+</body>
+</html>

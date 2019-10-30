@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 TryOut</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form autocomplete="on">
+	*First Name: <input placeholder="First name" name="fname" type="text" required /> <br />
+	*Last name: <input type="text" name="lname" placeholder="Last name" /><br />
+	Telephone: <input type="tel" name="phone" /> <br/>
+	*Email: <input type="email" name="email" required /><br />
+	Favorite Animal: <input type="text" name="animal" list="animals" /> (Using datalist. Try typing "D" or "B" or doubleclick)<br />
+	ID Number:
+	<input type="text" placeholder="enter your 5 digit id number" name="idNumber" pattern="[0-9]{5}" /> (Try typing "123" or "123456" or "abcde") <br />
+	<datalist id="animals">
+		<option value="Dog">
+		<option value="Dolphin">
+		<option value="Duck">
+		<option value="Cat">
+		<option value="Bird">
+		<option value="Mouse">
+	</datalist>
+
+	<input type="submit" />
+	</form>
+	* = Required fields. Try leave them blank.<br /><br />
+
+	<i>This script need a HTML5 browser like Chrome</i>
+</body>
+</html>

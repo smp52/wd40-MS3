@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="css/styles2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body id="cats">
+
+  <div id="page-wrap">
+	<div class="header">
+		<div class="accountman" id="login"></div>
+        <div class="accountman pure-u-1-1" id="signin">
+        <form class="form" id="form1">
+
+          <p class="username pure-u-2-5">
+            <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="username" id="username" /></p>
+            <p class="password pure-u-2-5"><input name="password" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="password" id="password" />
+            </p>
+            <input type="button" class="button_blue pure-u-1-5" id="yikes" value="Login">
+            </form>
+        </div>
+
+        <div id="logo">
+            <a href="home.html"><img id="logoimage" src="images/logo.JPG" alt="Logo"></a>
+        </div>
+				<nav>
+           <ul class="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li ><a href="adopt.html" >Adopt</a></li>
+                <li><a href="cats.html" class="activeNav">Cats</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">events</a></li>
+
+            </ul>
+        </nav>
+
+   </div>
+
+    <div id="container" class="gally">
+         <div class="gallery">
+           <h1>Cats</h1>
+             <div class="filters">
+             <h2>Filters:</h2>
+        <div class="section12 pure-u-1-1">
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+        <a href=""><div class="metatagz1"><p>&times; tag</p></div></a>
+
+        <div class="newFilter" id="newFilter">
+        <div class="metatagz1"><p>New Filter</p></div>
+        </div>
+
+        <div class="checkFilter" id="checkFilter">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br>
+        <hr>
+        <input type="radio" name="age" value="30"> 0 - 30<br>
+        <input type="radio" name="age" value="60"> 31 - 60<br>
+        <input type="radio" name="age" value="100"> 61 - 100<br>
+            <hr>
+        </div>
+
+        </div>
+                 </div>
+<!--<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <input type="checkbox" class="radio" value="1" onclick="filterSelection('cars')"> Cars<br>
+  <input type="checkbox" class="radio" value="1" onclick="filterSelection('animals')"> Animals<br>
+  <input type="checkbox" class="radio" value="1" onclick="filterSelection('fruits')"> Fruits<br>
+  <input type="checkbox" class="radio" value="1" onclick="filterSelection('colors')"> Colors<br>
+</div>-->
+
+<div class="image_container pure-u-1-1">
+
+               <div class="image_row1">
+                  <div class="filterDiv cars"> <a href="catprofile.html"><img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                   <div class="filterDiv colors fruits"> <a href="catprofile.html"><img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                   <div class="filterDiv cars animals"><a href="catprofile.html"><img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+               </div>
+
+               <div class="image_row2">
+                  <div class="filterDiv cars"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                   <div class="filterDiv colors fruits"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                   <div class="filterDiv cars animals"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+               </div>
+
+               <div class="image_row3">
+                  <div class="filterDiv cars"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                    <div class="filterDiv colors fruits"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                  <div class="filterDiv cars animals"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+               </div>
+
+                <div class="image_row4">
+                  <div class="filterDiv cars"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                    <div class="filterDiv colors fruits"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+                        <div class="filterDiv cars animals"> <a href="catprofile.html"> <img src="https://picsum.photos/200/150" alt="Paddling Center Image"></a></div>
+               </div>
+   <div class="numbers">
+<h2><a href="">1,2,3,4,5,6</a></h2>
+            </div>
+</div>
+
+        </div>
+
+        </div>
+    </div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+ $('input[type="checkbox"]').on('change', function() {
+   $('input[type="checkbox"]').not(this).prop('checked', false);
+});
+
+</script>
+
+
+
+<footer>
+    <div class="footer-social pure-u-1-5" >
+        <ul>
+            <li><a href="http://www.facebook.com"><img src='images/facebook-dark.png' /></a></li>
+            <li><a href="http://www.twitter.com"><img src='images/twitter-dark.png' /></a></li>
+            <li><a  href="http://www.instagram.com"><img src='images/instagram-dark.png' /></a></li>
+        </ul>
+    </div>
+    <div class="pure-u-2-5">
+    <h3>This site is not official and is an assignment for a UCF Digital Media course | Copyright 2019 Catapalooza</h3></div>
+    <div class="pure-u-1-5"><h3>Contact</h3></div>
+
+</footer>
+
+
+</body>
+</html>

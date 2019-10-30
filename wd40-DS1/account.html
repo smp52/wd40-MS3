@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Account Page</title>
+	<link rel="stylesheet" type="text/css" href="css/styles2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body id="Account">
+
+  <div id="page-wrap">
+	<div class="header">
+		<div class="accountman" id="login"></div>
+        <div class="accountman pure-u-1-1" id="signin">
+        <form class="form" id="form1">
+
+          <p class="username pure-u-2-5">
+            <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="username" id="username" /></p>
+            <p class="password pure-u-2-5"><input name="password" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="password" id="password" />
+            </p>
+            <input type="button" class="button_blue pure-u-1-5" id="yikes" value="Login">
+            </form>
+        </div>
+        <div id="logo">
+                        <a href="home.html"><img id="logoimage" src="images/logo.JPG" alt="Logo"></a>
+
+        </div>
+				<nav>
+            <ul class="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li ><a href="adopt.html" >Adopt</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">events</a></li>
+
+            </ul>
+        </nav>
+
+   </div>
+
+    </div>
+
+    <div class="accountarea">
+        <div class="section1 pure-u-6-24">
+        <img src="https://picsum.photos/200/300">
+        <h3>Name</h3>
+        <h3>Info</h3>
+        <h3>Info</h3>
+        <h3>Info</h3>
+        </div>
+        <div class="section4 pure-u-3-8">
+        <h3>Active Applications</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt &#10004;</p>
+        <h3>Favorite Animal</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt &#10004;</p>
+        <h3>Donation Information</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt &#10004;</p>
+        </div>
+
+        <div class="section6 pure-u-13-24">
+
+        <button type="button" class="collapsible" id="collapsible">Information/ Form Area 1</button>
+            <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button type="button" class="collapsible" id="collapsible">Information/ Form Area 2</button>
+            <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button type="button" class="collapsible" id="collapsible">Information/ Form Area 3</button>
+            <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<footer>
+    <div class="footer-social pure-u-1-5" >
+        <ul>
+            <li><a href="http://www.facebook.com"><img src='images/facebook-dark.png' /></a></li>
+            <li><a href="http://www.twitter.com"><img src='images/twitter-dark.png' /></a></li>
+            <li><a  href="http://www.instagram.com"><img src='images/instagram-dark.png' /></a></li>
+        </ul>
+    </div>
+    <div class="pure-u-2-5">
+    <h3>This site is not official and is an assignment for a UCF Digital Media course | Copyright 2019 Catapalooza</h3></div>
+    <div class="pure-u-1-5"><h3>Contact</h3></div>
+
+</footer>
+
+</body>
+</html>
