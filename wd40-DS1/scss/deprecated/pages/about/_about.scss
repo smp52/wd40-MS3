@@ -1,0 +1,648 @@
+.about {
+    position: absolute;
+    left: 0;
+    height: calc(100vh + 17px);
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    bottom: -17px;
+    
+    &__sidenav {
+        
+        position: fixed;
+        height: 100vh;
+        width: 22rem;
+        top:0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        
+        background-color: $gray-dk-4;
+        
+        @include respond(tab-port) {
+            
+            display: none;
+            
+        }
+        
+        .social-media-list {
+            
+            display: block;
+            list-style: none;
+            width: 100%;
+            
+            li {
+                
+                display: block;
+                margin: 5rem auto;
+                
+            }
+
+        }
+         
+    }
+    
+    &__scrollbar {
+        
+        height: .6rem;
+        width: 70vw;
+        position: fixed;
+        bottom: 5rem;
+        left: 15vw;
+        z-index: 100;
+        
+        background-color: rgba($white, .2);
+        
+        cursor: pointer;
+        
+        &--inner {
+            
+            width: 10rem;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            
+            //background-color: $white;
+            
+            cursor: pßointer;
+        }
+        
+    }
+    
+    &__about {
+        
+        position: absolute;
+        height: 100vh;
+        width: 70rem;
+        top: 0;
+        left: 22rem;
+        padding: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include respond(tab-port) {
+            
+            width: 100vw;
+            left: 0;
+            padding: 4rem;
+            
+        }
+        
+        background-color: $gray-dk-3;
+        color: $white;
+        
+        
+        
+    }
+    
+    &__title {
+        
+        text-transform: uppercase;
+        letter-spacing: 1.5rem;
+        font-size: $font-md;
+        
+        margin-bottom: 2rem;
+        
+    }
+    
+    &__subtitle {
+        
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-size: $font-xxs;
+        font-weight: 600;
+        
+        color: $primary;
+        
+        margin-bottom: 2rem;
+        
+    }
+    
+    &__text {
+        
+        line-height: 3.5rem;
+        
+        //margin-bottom: 10rem;
+        
+    }
+    
+    &__member {
+        
+        position: absolute;
+        height: 100vh;
+        width: 45rem;
+        
+        @include respond(tab-port) {
+            
+            width: 100vw;
+            
+        }
+        
+        background-color: $white;
+        transition: $smooth;
+        
+        &:first-child {
+        
+            z-index: 25;
+            
+        }
+        
+        &:nth-child(2) {
+            
+            z-index: 24;
+            
+        }
+        
+        &:nth-child(3) {
+            
+            z-index: 23;
+            
+        }
+        
+        &:nth-child(4) {
+            
+            z-index: 22;
+            
+        }
+        
+        &:nth-child(5) {
+            
+            z-index: 21;
+            
+        }
+        
+        &:last-child {
+            
+            z-index: 20;
+            
+        }
+        
+        .about__front {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            
+            background-size: auto 100%;
+            background-position: center;
+            
+            color: $white;
+            text-align: center;
+            
+            cursor: pointer;
+            
+            transition: $smooth;
+            
+            &:hover {
+                
+                background-size: auto 105%;
+                
+                .about__front-titles {
+                    
+                    bottom: 12rem;
+                    transition: $smooth;
+                    
+                }
+                
+            }
+            
+            &-titles {
+                
+                width: 100%;
+                position: absolute;
+                bottom: 10rem;
+                
+                transition: $smooth;
+                
+            }
+            
+            h2 {
+                
+                text-transform: uppercase;
+                letter-spacing: .75rem;
+                
+                margin-bottom: 2rem;
+                
+            }
+            
+            h3 {
+                
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                font-weight: 600;
+                font-size: $font-xxs;
+                
+            }
+        }
+        
+        .about__back {
+            
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            background-color: $white;
+            opacity: 0;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12rem;
+            
+            overflow: hidden;
+            transition: $smooth;
+            
+            h2 {
+                
+                font-size: $font-md;
+                letter-spacing: 1.5rem;
+                text-transform: uppercase;
+                
+                margin-bottom: 2rem;
+                
+            }
+            
+            h3 {
+                
+                font-size: $font-xxs;
+                letter-spacing: .5rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                
+                margin-bottom: 3rem;
+                
+            }
+            
+            p {
+                line-height: 3.5rem;
+                margin-bottom: 5rem;
+            }
+            
+            
+        }
+        
+        &--arjun {
+            
+            left: 92rem;
+            
+            @include respond(tab-port) {
+                
+                left: 100vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/arjun.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--lenh {
+            
+            left: calc(92rem + (45rem * 1));
+            
+            @include respond(tab-port) {
+                
+                left: 200vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/lenh.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--erin {
+            
+            left: calc(92rem + (45rem * 2));
+            
+            @include respond(tab-port) {
+                
+                left: 300vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/erin.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--maritza {
+            
+            left: calc(92rem + (45rem * 3));
+            
+            @include respond(tab-port) {
+                
+                left: 400vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/maritza.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--azia {
+            
+            left: calc(92rem + (45rem * 4));
+            
+            @include respond(tab-port) {
+                
+                left: 500vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/azia.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--ross {
+            
+            left: calc(92rem + (45rem * 5));
+            
+            @include respond(tab-port) {
+                
+                left: 600vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/about/ross.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--nicole {
+            
+            left: calc(92rem + (45rem * 6));
+            
+            @include respond(tab-port) {
+                
+                left: 700vw;
+                
+            }
+            background-color: green;
+            
+        }
+        
+        &--design {
+            
+            left: 92rem;
+            
+            @include respond(tab-port) {
+                
+                left: 100vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/create.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--development {
+            
+            left: calc(92rem + (45rem * 1));
+            
+            @include respond(tab-port) {
+                
+                left: 200vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/login.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--graphic {
+            
+            left: calc(92rem + (45rem * 2));
+            
+            @include respond(tab-port) {
+                
+                left: 300vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/superhero01.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        &--social {
+            
+            left: calc(92rem + (45rem * 3));
+            
+            @include respond(tab-port) {
+                
+                left: 400vw;
+                
+            }
+            
+            .about__front {
+                
+                background-image: url(../img/login-bg.jpg);
+                
+            }
+            
+            .about__back {
+                
+                h2 {
+                    
+                    color: $primary;
+                    
+                }
+                
+                h3 {
+                    
+                    color: $primary-dk-2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    
+}

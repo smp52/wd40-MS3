@@ -1,0 +1,119 @@
+.body-skware #pt3__client {
+    background-color: $skware-2;
+}
+
+.body-skware .case-study {
+    
+    &__hero {
+        background-color: $skware-2;
+
+        
+        &-content {
+            color: $white;
+        }
+        
+        
+    }
+    
+    &__overview {
+        
+        
+        &-title {
+            background-color: $gray-dk-3;
+            color: $white;
+        }
+        
+        &-text {
+
+        }
+    }
+    
+    &__next-project {
+        &-container {
+            background-color: $united-travel;
+        }
+    }
+    
+}
+
+.body-skware .navigation {
+    
+    &__navbar {
+        background-color: $skware-2;
+    }
+    
+    &__button {
+        border: none;
+    }
+    
+    &__logo {
+        &-container {
+            
+            h2 {
+                color: $white;
+            }
+
+            h2:nth-child(2) {
+                color: $white;
+                opacity: .5;
+            }
+
+        }
+        a {
+            
+            span {
+                color:white;
+            }
+        }
+    }
+    
+    &__back-button {
+        
+        i {
+            color: $white;
+        }
+    }
+    
+    &__background {
+        background-color: $white;
+    }
+    
+    &__nav {
+        
+        &-ticker {
+            color:$primary;
+        }
+    }
+    
+    &__link  {
+        &,
+        &:link,
+        &:visited {
+           color:$gray-dk-3; 
+        }
+        
+        
+        &:hover,
+        &:active {
+            color: $gray-dk-3;
+        }
+        
+        &--active {
+            &,
+            &:link,
+            &:visited {
+                color: $gray-dk-3;
+            }
+            
+            span {
+                color: $primary;
+            }
+            
+            &:hover,
+            &:active {
+                color:$gray-dk-3;
+            }
+        }
+        
+    }
+}

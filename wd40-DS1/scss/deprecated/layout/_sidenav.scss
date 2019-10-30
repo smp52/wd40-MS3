@@ -1,0 +1,342 @@
+.sidenav {
+    
+    &__left {
+        height: 100vh;
+        width: 25rem;
+        position: fixed;
+        padding: 17rem 2rem 0 8rem;
+        
+        &-list {
+            
+            .active {
+                color: $primary;
+            }
+            
+            li {
+                display: block;
+                margin-bottom: 4rem;
+                text-transform: uppercase;
+                font-family: $heading-font;
+                font-weight: 600;
+                letter-spacing: .5rem;
+                cursor: pointer;
+                color: rgba($black, .25);
+            }
+            
+        }
+    }
+}
+
+.sidenav {
+    &__right {
+        position: fixed;
+        width: 3rem;
+        height: 100vh;
+        top: 0;
+        right: calc(8rem + 3rem - 1.5rem);
+        z-index: 20;
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+    
+    &__bar {
+        height: 50%;
+        width:3rem;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        transition: $smooth;
+        cursor: pointer;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top:0;
+            left: calc(50% - .25rem);
+            height: 100%;
+            width: .5rem;
+            background-color: rgba($gray-dk-3, .2);
+            pointer-events: none;
+        }
+        
+        &--inner {
+            display: block;
+            width: 200%;
+            transform: translateX(-25%);
+            height: calc(100% / 8);
+            background-color: transparent;
+            transition: $smooth;
+            
+            a {
+                height: 100%;
+                width:100%;
+                display: block;
+                &,
+                &:link,
+                &:visited {
+                    color:transparent;
+                    background-color: transparent;
+                }
+            }
+            
+        }
+        
+        .sidenav__active {
+            background-color: $gray-dk-3;
+            width:.5rem;
+            height:20%;
+            display: block;
+            position: absolute;
+            top:0;
+            left: calc(50% - .25rem);
+            transition: top .2s, opacity .4s;
+        }
+    }
+    
+    &__box {
+        height: 15rem;
+        width: 18vw;
+        background-color: $primary;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 500;
+        cursor: pointer;
+        transition: $normal;
+        
+        @include respond(tab-port) {
+            width: 30vw;
+            height: 15rem;
+        }
+        
+        @include respond(phone) {
+            display: none;
+        }
+        
+        &-ticker {
+            font-size: 12rem;
+            line-height: 12rem;
+            @include centerBox;
+            opacity: .15;
+        }
+        
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: .4rem;
+            font-weight: 600;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right: 3vw;
+            text-align: right;
+        }
+        
+        &-menu {
+            height: calc(100vh - 15rem);
+            width: 18vw;
+            background-color: $gray-dk-3;
+            position: fixed;
+            z-index: 550;
+            right:0;
+            bottom: 0;
+            transform: translateY(100%);
+            transition: $normal;
+            
+            @include respond(tab-port) {
+                width: 30vw;
+            }
+            
+            ul {
+                width: 100%;
+                @include centerBox;
+                top: 40%;
+                
+                li {
+                    text-align: center;
+                    color: $white;
+                    font-family: $heading-font;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    letter-spacing: .6rem;
+                    line-height: 4rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: $normal;
+                    
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+        
+        &-collapse {
+            display: block;
+            height: 6rem;
+            width: 6rem;
+            position: absolute;
+            bottom: 4rem;
+            right: calc(50% - 3rem);
+            border: 2px solid $white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: $smooth;
+            z-index: 1000;
+            
+            
+            &-inner {
+                @include centerBox;
+                background-color: transparent;
+                
+                &,
+                &::before,
+                &::after {
+                    width:3rem;
+                    height:2px;
+                    display: inline-block;
+                    transition:$quick;
+                }
+                
+                &::before,
+                &::after {
+                    content: '';
+                    background-color: $white;
+                    position: absolute;
+                    top: 0;
+                    
+                }
+                
+                &::before {
+                    transform: rotate(135deg);
+                }
+                
+                &::after {
+                    transform: rotate(-135deg);
+                }
+            }
+            
+            &:hover {
+                .sidenav__box-collapse-inner {
+                    &::before {
+                        transform: rotate(0);
+                    }
+
+                    &::after {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    &__exit {
+        position: fixed;
+        z-index: 3000;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 82vw;
+        background-color: transparent;
+        display: none;
+    }
+    
+    &__hidden-menu {
+        position: absolute;
+        width: 20vw;
+        top: 45%;
+        left: 0;
+        transform: translate(-120%, -50%);
+        display: none;
+        
+        ul {
+            
+            li {
+                text-align: right;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                user-select: none;
+                transition: $quick;
+                line-height: 3rem;
+                backface-visibility: hidden;
+                font-size: 1.3rem;
+                
+                &:not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        
+        &-bg {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            //background-color: rgba(black, .8);
+            display: none;
+        }
+    }
+}
+    
+.lt {
+    //clip: rect(0px, 1000px, 0px, 0px);
+    
+    .sidenav__bar {
+        //background-color: rgba($white, .3);
+        
+        &::after {
+            background-color: rgba($white, .3);
+        }
+        
+        .sidenav__active {
+            background-color: $white;
+        }
+        
+    }
+    
+    .sidenav__hidden-menu {
+        ul {
+            li {
+                color: $white;
+            }
+        }
+        
+        &-bg {
+            //background-color: rgba($black, .9);
+            background-image: linear-gradient(90deg, transparent, rgba($black, .9));
+        }
+    }
+}
+
+.dk {
+    
+    .sidenav__bar {
+        //background-color: rgba($gray-dk-3, .2);
+        
+        &::after {
+            background-color: rgba($gray-dk-3, .2);
+        }
+        
+        .sidenav__active {
+            background-color: $gray-dk-3;
+        }
+    }
+    
+    .sidenav__hidden-menu {
+        ul {
+            li {
+                color: $gray-dk-3;
+            }
+        }
+        
+        &-bg {
+            background-color: rgba($white, .9);
+        }
+    }
+    
+}

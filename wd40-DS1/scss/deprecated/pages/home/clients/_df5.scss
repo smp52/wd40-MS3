@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Wask Bold';
+  src: url(fonts/wask-bold.woff);
+}
+
+.df5 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include clearfix;
+}
+
+.df5 .client {
+    &__info {
+        
+        &-content {
+            
+            &-title {
+                color: $df5;
+            }
+            
+            .btn-text {
+                &,
+                &:link,
+                &:visited {
+                    color: $df5;
+                }
+                
+                &:hover {
+                    color: $df5;
+                }
+            }
+        }
+        
+            .scroll-icon {
+
+                &:hover {
+                    .scroll-icon__mouse {
+
+                        border-color: $df5;
+
+                        &-inner {
+                            background-color: $df5;
+                        }
+
+                    }
+
+                    .scroll-icon__text {
+                        color: $df5;
+                        //opacity: 1;
+                    }
+
+                }
+
+            }
+    }
+    
+    &__image {
+        background-image: url(../img/df5-bg.jpg);
+        
+        @include respond(phone) {
+            background-image: url(../img/df5-bg-m.jpg);
+        }
+    }
+    
+    &__logo {
+        left: calc(40vw - 7.5vw);
+        top:0;
+        height: 100vh;
+        
+        @include respond(tab-port) {
+            height: 35vw;
+            width: 50vw;
+            top: calc(30vh - (35vw / 2));
+            left: 25vw;
+        }
+        
+        @include respond(iphone) {
+            height: 25vw;
+            top: calc(25vh - (25vw / 2));
+        }
+        
+        h2 {
+            font-family: 'Wask Bold', 'Montserrat', sans-serif;
+            font-size: 20rem;
+            color: $df5;
+            letter-spacing: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(270deg);
+            
+            @include respond(tab-port) {
+                transform: none;
+                font-size: 15rem;
+                top: 0;
+                left: 0;
+                position: relative;
+                line-height: 35vw;
+                width: 100%;
+                text-align: center;
+            }
+            
+            @include respond(iphone) {
+                line-height: 25vw;
+                font-size: 10rem;
+            }
+        }
+    }
+}

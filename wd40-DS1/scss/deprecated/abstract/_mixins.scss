@@ -1,0 +1,66 @@
+@mixin centerBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content:'';
+        clear:both;
+        display: table;
+    }
+}
+
+// MEDIA QUERIES
+/*
+0 - 400px:      iPhone Small (phone)
+400 - 600px:    Phone (phone)
+600 - 900px:    Tablet Portrait (tab-port)
+900 - 1200px:   Tablet Landscape (tab-land)
+1200 - 1800px:  Desktop (This is where our normal styles apply)
+1800+           Large Desktop (desktop)
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == iphone {
+        @media(max-width: 23em) { @content }; //400px
+    }
+    @if $breakpoint == phone {
+        @media(max-width: 37.5em) { @content }; //600px
+    }
+    @if $breakpoint == tab-port {
+        @media(max-width: 56.25em) { @content }; //900px
+    }
+    @if $breakpoint == tab-land {
+        @media(max-width: 75em) { @content }; //1200px
+    }
+    @if $breakpoint == desktop {
+        @media(max-width: 100em) { @content }; //1600px
+    }
+}
+
+// MEDIA QUERIES Y DIRECTION
+/*
+0 - 400px:      iPhone Small (phone)
+400 - 600px:    Phone (phone)
+600 - 900px:    Tablet Portrait (tab-port)
+900 - 1200px:   Tablet Landscape (tab-land)
+1200 - 1800px:  Desktop (This is where our normal styles apply)
+1800+           Large Desktop (desktop)
+
+*/
+
+@mixin respondY($breakpointY) {
+    @if $breakpointY == zoom {
+        @media(max-height: 43.75em) { @content }; //700px
+    }
+    @if $breakpointY == laptop {
+        @media(max-height: 50em) { @content }; //800px
+    }
+    @if $breakpointY == ipad-pro {
+        @media(min-height: 75em) { @content }; //1200px
+    }
+}

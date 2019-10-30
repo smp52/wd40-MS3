@@ -1,0 +1,65 @@
+@keyframes tick-clock {
+  to {
+    visibility: hidden;
+  }
+}
+.clock {
+    width: 80vw;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 40vw);
+    transform: translateY(-50%);
+    transition: all .6s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    z-index: 10000;
+    pointer-events: none;
+    
+    color: $white;
+    
+    &__name {
+        
+        font-size: $font-xl;
+        
+    }
+    
+    &__clock {
+        
+        font-size: $font-lg;
+        letter-spacing: .3rem;
+        margin-bottom: 2rem;
+        
+        &--suffix {
+            
+            font-size: $font-sm;
+            text-transform: uppercase;
+            padding-left: .5rem;
+            
+        }
+        
+        &--ticker {
+            animation: tick-clock 1s steps(2, start) infinite;
+        }
+        
+    }
+    
+    &__date {
+        
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .4rem;
+        margin-bottom: 1rem;
+        
+    }
+    
+    &__weather {
+        
+        h4 {
+            
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            
+        }
+        
+    }
+    
+}

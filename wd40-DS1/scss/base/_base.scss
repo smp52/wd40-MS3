@@ -1,0 +1,52 @@
+/* BROWSER RESET */
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    user-drag: none;
+    user-select: none;
+}
+
+html {
+    font-size:62.5%;
+    //scroll-behavior: smooth;
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem = 9px
+    }
+    
+    @include respond(tab-port){
+        font-size: 50%; //1rem = 8px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.disabledrag, img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: rgba($primary, .6);
+}
+
+::selection {
+  color: $white;
+  background: rgba($primary, .6);
+}

@@ -1,0 +1,103 @@
+@keyframes mouseScrollIcon {
+    0% {
+        top: 1rem;
+        height: 2rem;
+    }
+    
+    12.5% {
+        top: 2rem;
+        height: 2.2rem;
+    }
+    
+    25% {
+        top: 1rem;
+        height: 2rem;
+    }
+    
+    100% {
+        top: 1rem;
+        height: 2rem;
+    }
+}
+
+@keyframes swipeCircle {
+    0% {
+        top: 9rem;
+        background-color: $white;
+    }
+    50% {
+        top: 0;
+        background-color: $white;
+    }
+    60% {
+        top: 0;
+        background-color: transparent;
+    }
+    
+    90% {
+        top: 0;
+        background-color: transparent;
+    }
+    95% {
+        top: 9rem;
+        background-color: transparent;
+    }
+    100% {
+        top: 9rem;
+        background-color: $white;
+    }
+    
+}
+
+@keyframes swipeCircleDark {
+    0% {
+        top: 9rem;
+        background-color: $gray-dk-3;
+    }
+    50% {
+        top: 0;
+        background-color: $gray-dk-3;
+    }
+    60% {
+        top: 0;
+        background-color: transparent;
+    }
+    
+    90% {
+        top: 0;
+        background-color: transparent;
+    }
+    95% {
+        top: 9rem;
+        background-color: transparent;
+    }
+    100% {
+        top: 9rem;
+        background-color: $gray-dk-3;
+    }
+    
+}
+
+@keyframes swipeLines {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    30% {
+        opacity: 1;
+        //transform: translateY(-1rem);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+}

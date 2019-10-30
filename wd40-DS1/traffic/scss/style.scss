@@ -1,0 +1,53 @@
+body{
+  background:#333;
+}
+
+svg{
+  transform:scale(2,2);
+  display:block;
+  margin:0 auto;
+}
+
+
+$start: -500px;
+$end: 500px;
+$duration: 9s;
+$easing:linear;
+
+.red-car{
+  animation: red-move 11s $easing infinite;
+}
+.green-car{
+  animation: green-move $duration $easing infinite;
+}
+.blue-car{
+  animation: blue-move 5s $easing infinite;
+}
+
+
+
+
+@keyframes red-move{
+  0%{
+    transform: translate(-600px,10px);
+  }
+  100%{
+    transform: translate($end,10px);
+  }
+}
+@keyframes green-move{
+  0%{
+    transform: translate($start,5px);
+  }
+  100%{
+    transform: translate($end,5px);
+  }
+}
+@keyframes blue-move{
+  0%{
+    transform: translate($start,0);
+  }
+  100%{
+    transform: translate($end,0);
+  }
+}

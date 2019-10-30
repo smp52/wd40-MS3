@@ -1,0 +1,64 @@
+.skware {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include clearfix;
+}
+
+.skware .client {
+    &__info {
+        
+        &-content {
+            
+            &-title {
+                color: $skware;
+            }
+            
+            .btn-text {
+                &,
+                &:link,
+                &:visited {
+                    color: $skware;
+                }
+                
+                &:hover {
+                    color: $skware-2;
+                }
+            }
+        }
+        
+            .scroll-icon {
+                
+                &:hover {
+                    .scroll-icon__mouse {
+
+                        border-color: $skware-2;
+
+                        &-inner {
+                            background-color: $skware-2;
+                        }
+
+                    }
+
+                    .scroll-icon__text {
+                        color: $primary;
+                        //opacity: 1;
+                    }
+
+                }
+
+            }
+    }
+    
+    &__image {
+        background-image: url(../img/skware-bg.jpg);
+        
+        @include respond(phone) {
+            background-image: url(../img/skware-bg-m.jpg);
+        }
+    }
+    
+    &__logo {
+        left: calc(40vw - 7.5vw);
+    }
+}

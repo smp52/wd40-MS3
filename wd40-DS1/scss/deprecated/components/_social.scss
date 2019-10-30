@@ -1,0 +1,174 @@
+.social-media-list {
+    list-style: none;
+    
+        
+        li {
+            display: inline-block;
+            position: relative;
+            transition: all .3s;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            text-align: center;
+            letter-spacing: normal;
+            
+            &:not(:last-child) {
+                margin-right:2rem;
+            }
+            
+            &:hover {
+
+            }
+            
+            &:active {
+
+            }
+            
+            a {
+                &:link,
+                &:visited {
+                    font-size:2rem; 
+                    height:100%;
+                    width:100%;
+                    position:relative;
+                    display: block;
+                }
+                
+                i {
+                    @include centerBox;
+                }
+                
+            }
+        }
+        
+    &--white {
+        li {
+           background-color: $white;
+            
+            a {
+                color:$primary;
+            }
+        }
+        
+    }
+    
+    &--primary {
+        
+        li {
+            background-color: $primary;
+            
+            a {
+                color:$white;
+            }
+        }
+    }
+    
+    &--hollow-dk {
+        li {
+            background-color: transparent;
+            position: relative;
+            
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top:0;
+                left:0;
+                border-radius: 50%;
+                height:100%;
+                width: 100%;
+                background-color: transparent; 
+                border-right: 2px solid $gray-dk-3;
+                border-left: 2px solid $gray-dk-3;
+                border-top: 2px solid $gray-dk-3;
+                border-bottom: 2px solid $gray-dk-3;
+                transition: $normal;
+            }
+            
+            
+            &:hover::before,
+            &:active::before {
+                //border-color: $primary;
+                border-right: 2px solid $gray-dk-3;
+                border-left: 2px solid transparent;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                transform: rotate(360deg);
+            }
+            
+            &:hover {
+                a {
+                    &,
+                    &:link,
+                    &:visited {
+                        color: $gray-dk-3;
+                    }
+                }
+            }
+            
+        }
+        
+        a {
+            &,
+            &:link,
+            &:visited {
+                color: $gray-dk-3;
+            }
+        }
+        
+    }
+    
+    &--hollow-lt {
+        li {
+            background-color: transparent;
+            position: relative;
+            
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top:0;
+                left:0;
+                border-radius: 50%;
+                height:100%;
+                width: 100%;
+                background-color: transparent; 
+                border-right: 2px solid $white;
+                border-left: 2px solid $white;
+                border-top: 2px solid $white;
+                border-bottom: 2px solid $white;
+                transition: $normal;
+            }
+            
+            
+            &:hover::before,
+            &:active::before {
+                //border-color: $primary;
+                border-right: 2px solid $white;
+                border-left: 2px solid transparent;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                transform: rotate(360deg);
+            }
+            
+            &:hover {
+                a {
+                    &,
+                    &:link,
+                    &:visited {
+                        color: $white;
+                    }
+                }
+            }
+            
+        }
+        
+        a {
+            &,
+            &:link,
+            &:visited {
+                color: $white;
+            }
+        }
+    }
+}

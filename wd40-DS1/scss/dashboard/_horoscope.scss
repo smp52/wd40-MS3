@@ -1,0 +1,30 @@
+.horoscope {
+    position: absolute;
+    width: 25vw;
+    height: 70vh;
+    right: 5vw;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__quote {
+        .qod {
+            font-style: italic;
+        }
+        
+        margin-bottom: 5rem;
+    }
+    
+    #sign {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    &__title {
+        font-size: 150%;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        margin-bottom: 2rem;
+    }
+}

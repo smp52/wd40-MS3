@@ -1,0 +1,22 @@
+.z-10 {
+    z-index: 10;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+.z-1000 {
+    z-index: 1000;
+}
+
+.z-10000 {
+    z-index: 10000;
+}
+
+#pt1,
+#pt2,
+#pt3 {
+    z-index: 10500;
+    //transform: translateY(-100vh);
+}

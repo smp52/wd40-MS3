@@ -1,0 +1,59 @@
+.preload {
+    height: 100vh;
+    width: 100vw;
+    background-color: $white;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000000000000;
+    transition: $smooth ease-out;
+    
+    &__container {
+        height: 8rem;
+        width: 8rem;
+        @include centerBox;
+    }
+    
+    &__spinner {
+        display: block;
+        @include centerBox;
+        height:22rem;
+        width: 22rem;
+        background-color: transparent;
+        border-top: 2px solid rgba($primary, .4);
+        border-bottom: 2px solid rgba($primary, .4);
+        border-right: 2px solid rgba($primary, .4);
+        border-left: 3px solid $primary;
+        border-radius: 50%;
+        animation: loadingSpinner 1.5s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        transition: $smooth;
+    }
+    
+    &__bar {
+        height: .4rem;
+        width: 60vw;
+        position: absolute;
+        bottom: 5rem;
+        left: calc((100vw - 60vw) / 2);
+        background-color: rgba($black, .1);
+        
+        &-inner {
+            display: block;
+            height: 100%;
+            width: 0;
+            background-color: $primary;
+        }
+    }
+    
+    noscript {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 10rem;
+        
+        span {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+/* NAVIGATION BAR */
+.navigation {
+    
+    &__navbar {
+        z-index: 80;
+    }
+    
+    &__button {
+        z-index: 500;
+    }
+    
+    &__logo {
+        z-index: 500;
+    }
+    
+    &__back-button {
+        z-index: 500;
+    }
+    
+    &__background {
+        z-index: 850;
+    }
+    
+    &__exit {
+        z-index: 100;
+    }
+    
+    &__shade {
+        z-index: 900;
+    }
+    
+    &__nav { 
+        z-index: 875;
+        
+        &-ticker {
+            z-index:-1;
+        }
+    }
+    
+    &__link,
+    &__link--active {
+        
+        &:link,
+        &:visited {
+            z-index: 1800;
+        }
+    }
+    
+}
+
+.sidenav {
+    &__right {
+        z-index: 20;
+    }
+    
+    &__box {
+        z-index: 1600;    
+    }
+}
+
+#pt1,
+#pt2,
+#pt3 {
+    z-index: 10500;
+    //transform: translateY(-100vh);
+}

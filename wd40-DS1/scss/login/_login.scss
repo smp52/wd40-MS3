@@ -1,0 +1,463 @@
+.login {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    width: 100vw;
+    transition: all 1.3s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    z-index: 10000000;
+    
+    //display: none;
+    
+    @include respond(tab-port) {
+        grid-template-columns: auto;
+    }
+    
+    &__pane {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .login-buttons__button {
+            display: block;
+            width: 250px;
+            margin: 2rem auto 0 auto;
+            
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .login-form {
+            width: 60%;
+            
+            @include respond(tab-port){
+                width: 75%;
+            }
+            
+            @include respond(phone){
+                width: 100%;
+            }
+            
+            padding: 4rem;
+            
+            &__slide {
+                
+                &-title {
+                    text-transform: uppercase;
+                    letter-spacing: 1rem;
+                    margin-bottom: 2rem;
+                    
+                    @include respond(phone) {
+                        letter-spacing: .4rem;
+                    }
+
+                    span {
+                        color: $primary;
+                    }
+                    
+                    &-alt {
+                        letter-spacing: .1rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+                
+                &-subtitle {
+                    margin-bottom: 3rem;
+                }
+                
+                &-subtitle,
+                &-or {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: $font-xxs;
+                    letter-spacing: .5rem;
+                    
+                    @include respond(phone) {
+                        letter-spacing: .2rem;
+                    }
+                }
+            }
+
+            
+            &__next,
+            &__submit {
+                cursor: pointer;
+                display: block;
+                margin: 2rem auto 0 auto;
+                box-sizing: border-box;
+                height: 40px;
+                width: 250px;
+                padding: 5px;
+                border-radius: 2px;
+                border: none;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: .5rem;
+                color: white;
+                transition: all .3s;
+                
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                
+                &:hover {
+                    opacity: .9;
+                }
+            }
+            
+            &__next {
+                background-color: $gray-dk-3;
+            }
+            
+            &__submit {
+                background-color: $primary;
+            }
+            
+            input {
+                display: block;
+                height: 40px;
+                width: 250px;
+                padding: 5px;
+                border-radius: 2px;
+                border: 2px solid $gray-dk-3;
+                margin-top: 2rem;
+                margin-left: auto;
+                margin-right: auto;
+                transition: $normal;
+                
+                &:focus {
+                    outline: none;
+                    border-width: 3px;
+                    border-color: $primary;
+                }
+            }
+        }
+        
+    }
+    
+    &__background {
+        height:100vh;
+        //background-image: url(../img/login-bg.jpg);
+        background-color: $primary;
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        .rocketsvg{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            right: 0;
+            top: 0;
+            overflow: hidden;
+        }
+         .rocket {
+             width: 200px;
+             top: 35vh;
+             position: absolute;
+             margin: 0 auto;
+             left: 0;
+             right: 0;
+             animation: vibrate 0.3s ease infinite;
+
+        }
+         .rocket svg {
+             width: 300px;
+             fill:rgba($white,1);
+             stroke:rgba($primary,1);
+             stroke-width:10px;
+        }
+         .rocket svg .fire {
+             transition: all ease-in-out 1s;
+             stroke: $secondary-lt;
+        }
+         .rocket svg .fire.first {
+             stroke-dasharray: 100;
+             stroke-dashoffset: 0;
+             animation: dash 0.2s ease infinite;
+        }
+         .rocket svg .fire.second {
+             stroke-dasharray: 200;
+             stroke-dashoffset: 0;
+             animation: dash2 0.2s ease infinite;
+        }
+         .rocket svg .fire.third {
+             stroke-dasharray: 85;
+             stroke-dashoffset: 0;
+             animation: dash 0.2s ease infinite;
+        }
+         .sky {
+             transform: rotate(45deg);
+             position: absolute;
+             top: 150px;
+             left:200px;
+        }
+         .star {
+             position: absolute;
+             width: 4px;
+             height: 40px;
+             background: white;
+             border-radius: 5px;
+             z-index: 2;
+             animation: skyspace 0.5s ease infinite;
+
+        }
+         .star.star1 {
+             right: -60px;
+             top: -30px;
+             animation-delay: 0.1s;
+
+        }
+         .star.star2 {
+             right: 30px;
+             top: 30px;
+             animation-delay: 0.1s;
+
+        }
+         .star.star3 {
+             top: -40px;
+             left: 45px;
+             animation-delay: 0.2s;
+        }
+         .star.star4 {
+             top: -20px;
+             right: 75px;
+             animation-delay: 0.2s;
+        }
+         .star.star5 {
+             right: -35px;
+             top: -60px;
+             animation-delay: 0.3s;
+        }
+         .star.star6 {
+             right: 160px;
+             top: 50px;
+             animation-delay: 0.4s;
+        }
+         .star.star7 {
+             top: 20px;
+             left: 75px;
+             animation-delay: 0.3s;
+        }
+         .star.star8 {
+             top: -30px;
+             right: 95px;
+             animation-delay: 0.4s;
+        }
+         .star.star9 {
+             right: 30px;
+             top: -60px;
+             animation-delay: 0.3s;
+        }
+         .star.star10 {
+             right: 160px;
+             top: 50px;
+             animation-delay: 0.4s;
+        }
+         .star.star11 {
+             top: 20px;
+             left: 75px;
+             animation-delay: 0.3s;
+        }
+         .star.star12 {
+             top: -30px;
+             right: 95px;
+             animation-delay: 0.4s;
+
+        }
+         .star.star13 {
+             right: -90px;
+             top: -100px;
+             animation-delay: 0.3s;
+        }
+         .star.star14 {
+             right: -20px;
+             top: 50px;
+             animation-delay: 0.4s;
+        }
+         .star.star15 {
+             top: 20px;
+             right: -65px;
+             animation-delay: 0.3s;
+        }
+         .star.star16 {
+             top: -30px;
+             right: -25px;
+             animation-delay: 0.4s;
+        }
+         @-webkit-keyframes dash {
+             0% {
+                 stroke-dashoffset: 50;
+            }
+             50% {
+                 stroke-dashoffset: 70;
+            }
+             80% {
+                 stroke-dashoffset: 60;
+            }
+             100% {
+                 stroke-dashoffset: 50;
+            }
+        }
+         @-webkit-keyframes dash2 {
+             0% {
+                 stroke-dashoffset: 100;
+            }
+             50% {
+                 stroke-dashoffset: 120;
+            }
+             80% {
+                 stroke-dashoffset: 110;
+            }
+             100% {
+                 stroke-dashoffset: 100;
+            }
+        }
+         @keyframes vibrate {
+             0% {
+                 transform: translate(0, 0);
+            }
+             50% {
+                 transform: translate(-1px, 1px);
+            }
+             100% {
+                 transform: translate(0, 0);
+            }
+        }
+         @keyframes skyspace {
+             0% {
+                 transform: translate(0, -200px) scale(1, 0);
+                 opacity: 0.8;
+            }
+             100% {
+                 transform: translate(0, 300px) scale(1, 2);
+                 opacity: 0;
+            }
+        }
+
+        //@import "susy";
+         //@import "compass/reset";
+         .starz, .twinkling, .clouds {
+             position: absolute;
+             display: block;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             width: 100%;
+             height: 100%;
+        }
+         .starz {
+             z-index: 0;
+             background: $primary url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+        }
+         .twinkling {
+             z-index: 1;
+             background: transparent url(../img/twinkling.png) repeat top center;
+             animation: move-twink-back 200s linear infinite;
+        }
+         @keyframes move-twink-back {
+             from {
+                 background-position: 0 0;
+            }
+             to {
+                 background-position: -10000px 5000px;
+            }
+        }
+         @keyframes move-clouds-back {
+             from {
+                 background-position: 0 0;
+            }
+             to {
+                 background-position: 10000px 0;
+            }
+        }
+
+        
+    }
+}
+
+#ft1,
+#ft2,
+#ft3 {
+    position: fixed;
+    height: 100vh;
+    width: 60vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 1s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transform: translateY(-100%);
+    
+    @include respond(tab-port) {
+        width: 100vw;
+    }
+}
+
+#ft1 {
+    background-color: $secondary-lt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .loading-spinner {
+
+        border-top: 2px solid rgba($primary, .4);
+        border-bottom: 2px solid rgba($primary, .4);
+        border-right: 2px solid rgba($primary, .4);
+        border-left: 3px solid $primary;
+        
+    }
+}
+
+#ft2 {
+    background-color: $lifelink-2;
+    transition-duration: 2s;
+}
+
+#ft3 {
+    background-color: $united-travel;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    div {
+        widows: 90%;
+    }
+    
+    h1, h2 {
+        display: block;
+        color: white;
+        text-align: center;
+    }
+    
+    h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .5rem;
+        font-size: $font-xxs;
+        margin-top: 3rem;
+    }
+    
+    .ft3-image {
+        height: 15rem;
+        width: 15rem;
+        display: block;
+        border-radius: 50%;
+        background-color: white;
+        margin: 0 auto 3rem auto;
+        position: relative;
+        
+        img {
+            @include centerBox;
+            border-radius: 50%;
+            height: 10rem;
+            width: 10rem;
+        }
+    }
+    
+}
+

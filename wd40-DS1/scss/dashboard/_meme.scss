@@ -1,0 +1,22 @@
+.meme {
+    
+    position: absolute;
+    width: 25vw;
+    height: 70vh;
+    bottom: 0;
+    
+    left: 5vw;
+    
+    img {
+        max-width: 100%;
+        @include centerBox;
+    }
+    
+    &__title {
+        font-size: 150%;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        text-align:center;
+    }
+    
+}

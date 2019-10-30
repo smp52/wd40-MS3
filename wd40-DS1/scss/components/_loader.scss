@@ -1,0 +1,74 @@
+@keyframes letterExpand {
+    0% {
+        transform: scale(1);
+        opacity: .8;
+    }
+    20% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1);
+        opacity: .8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+}
+
+.n3xt-loader {
+    height: 100%;
+    width: 100%;
+    
+    h2 {
+        position: absolute;
+        font-size: $font-xs;
+        line-height: $font-xs;
+        animation-name: letterExpand;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+    
+    h2:first-child {
+        top: 0;
+        left: 0;
+    }
+    
+    h2:nth-child(2) {
+        top: 0;
+        right: 0;
+        color: $primary;
+        animation-delay: .5s;
+    }
+    
+    h2:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        animation-delay: 1s;
+    }
+    
+    h2:last-child {
+        bottom: 0;
+        right: 0;
+        animation-delay: 1.5s;
+    }
+}
+
+.loading-spinner {
+    display: block;
+    margin: 0 auto;
+    height: 15rem;
+    width: 15rem;
+    background-color: transparent;
+    border-top: 2px solid rgba($primary, .4);
+    border-bottom: 2px solid rgba($primary, .4);
+    border-right: 2px solid rgba($primary, .4);
+    border-left: 3px solid $primary;
+    border-radius: 50%;
+    animation: loadingSpinner 1.5s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    transition: $smooth;
+}

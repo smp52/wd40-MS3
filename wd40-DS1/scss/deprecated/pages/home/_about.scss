@@ -1,0 +1,123 @@
+.aboutme {
+    height:100vh;
+    width:100vw;
+    position: relative;
+    background-color: $bg-lt;
+    
+    @include respondY(zoom) {
+        height: 120vh;
+    }
+    
+    &__video {
+        position: absolute;
+        height:100vh;
+        width:30vw;
+        overflow: hidden;
+        opacity: .2;
+        
+        .bg-video__content {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+        
+        @include respondY(zoom) {
+            height: 120vh;
+        }
+    }
+    
+    &__text {
+        width: calc(60vw - 45vh);
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left: 20vw;
+        
+        h2 {
+            font-weight: bold;
+            font-size: 12rem;
+            opacity: .5;
+            
+            @include respondY(zoom) {
+                font-size: 8rem;
+            }
+        }
+        p {
+            line-height: 3rem;
+        }
+        
+        p:nth-child(2) {
+            padding-bottom: 3rem;
+        }
+        
+        .accent {
+            font-weight: bold;
+            color: $primary;
+        }
+    }
+    
+    &__btn {
+        margin-top:4rem;
+    }
+    
+    &__social {
+        position: absolute;
+        width: 100%;
+        bottom: 3rem;
+        
+        .social-media-list {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    &__box {
+        height: 65vh;
+        width: 45vh;
+        background-color: $gradient3;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15rem;
+        opacity: .8;
+        
+        @include respondY(zoom) {
+            height:80vh;
+        }
+        
+        @include respondY(laptop) {
+            height:70vh;
+        }
+        
+        &--contact {
+            text-align: center;
+            padding-top:40vh;
+            
+            h3 {
+                font-size: 1.6rem;
+                letter-spacing: .1rem;
+                line-height: 3rem;
+            }
+            
+            h3:first-child {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: bold;
+                letter-spacing: .3rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+    &__picture {
+        position: absolute;
+        display: block;
+        height: 40vh;
+        top: -5rem;
+        left: calc(15vh/2);
+        transition: $smooth;
+        
+        &:hover {
+            box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.17);
+        }
+    }
+}

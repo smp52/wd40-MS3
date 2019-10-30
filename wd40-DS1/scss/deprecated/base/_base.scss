@@ -1,0 +1,87 @@
+/* BROWSER RESET */
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    user-drag: none;
+    user-select: none;
+}
+
+html {
+    font-size:62.5%;
+    //scroll-behavior: smooth;
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem = 9px
+    }
+    
+    @include respond(tab-port){
+        font-size: 50%; //1rem = 8px
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.body-fixed {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.body-back {
+    overflow-x: hidden;
+}
+
+.body-normal {
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.disabledrag, img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    transition: $smooth;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $gray-lt-3; 
+    transition: $smooth;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $gray-dk-4; 
+    transition: $smooth;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary; 
+    transition: $smooth;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: rgba($primary, .6);
+}
+
+::selection {
+  color: $white;
+  background: rgba($primary, .6);
+}

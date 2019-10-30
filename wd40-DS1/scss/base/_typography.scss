@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $gray-dk-3;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    &,
+    &:link,
+    &:visited {
+        color: $primary;
+        text-decoration: none;
+        transition: $normal;
+        
+        &:hover {
+            color: $primary-dk;
+        }
+    } 
+}
+
+.heading {
+    margin-bottom: 3rem;
+    font-size: $font-md;
+    letter-spacing: 1.5rem;
+    
+    &,
+    &-sub {
+        text-transform: uppercase;
+    }
+    
+    &-sub {
+        font-weight: 700;
+        font-size: 80%;
+        letter-spacing: 1rem;
+    }
+}

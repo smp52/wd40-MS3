@@ -1,0 +1,483 @@
+.superhero {
+    height:100vh;
+    width:100vw;
+    position: relative;
+    background-color: $white;
+    overflow: hidden;
+    
+    &__container {
+        height: 100%;
+        width: 100%;
+        @include clearfix;
+        position: relative;
+    }
+    
+    // LEFT CONTENT
+    
+    &__left {
+        height: 100vh;
+        width: 60%;
+        float: left;
+        position: relative;
+        
+        
+        @include respond(tab-port) {
+            width: 70%;
+        }
+        
+        @include respond(phone) {
+            width: 100%;
+        }
+        
+        &-content {
+            width: 60%;
+            @include centerBox;
+            top: 40%;
+            
+            @include respond(desktop) {
+                width: 75%;
+            }
+            @include respond(tab-land) {
+                width: 89%;
+            }
+            @include respond(tab-port) {
+                width: 70%;
+            }
+            @include respond(phone) {
+                width: 90%;
+            }
+            
+            
+            .heading {
+                margin-bottom: 2rem;
+                color: $primary-dk-4;
+                font-size: $font-lg;
+                letter-spacing: 3rem;
+                
+                @include respond(phone) {
+                    letter-spacing: 2rem;
+                    font-size: $font-md;
+                    margin-bottom: 1rem;
+                }
+                
+                span {
+                    color: $primary;
+                }
+                
+                &-sub {
+                    line-height: 2;
+                    margin-bottom: 3rem;
+                    
+                    @include respond(phone) {
+                        letter-spacing: .5rem;
+                        font-size: 75%;
+                        margin-bottom: 1.5rem;
+                    }
+                    
+                    span {
+                        line-height: 2;
+                        background-color: $primary-dk-4;
+                        color: $white;
+                        padding: 1rem;
+                        
+                        @include respond(tab-port) {
+                            display: block;
+                            margin-top: 1rem;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+            p {
+                font-size: 110%;
+                letter-spacing: .1rem;
+                line-height: 2;
+                
+                @include respond(phone) {
+                    font-size: 90%;
+                }
+                
+                @include respond(iphone) {
+                    line-height: 1.7;
+                }
+            }
+            
+        }
+        
+    }
+    
+    .superhero__scroll {
+        position: absolute;
+        bottom: 10rem;
+        left:0;
+        width: 60vw;
+        
+        .scroll-icon {
+            width: 60%;
+            margin-left: 20%;
+            
+            @include respond(tab-port) {
+                width: 100%;
+                margin: 0;
+                position: absolute;
+                bottom: 10%;
+            }
+            
+            @include respond(iphone) {
+                bottom: 0;
+            }
+        }
+        
+        @include respond(tab-port) {
+            height: calc(100vh - 15rem);
+            width: 30vw;
+            background-color: $primary-dk-2;
+            bottom: 15rem;
+            right: 0;
+            left: auto;
+        }
+        
+        @include respond(phone) {
+            height: 35vh;
+            width: 35vw;
+            bottom: 0;
+            right: auto;
+            left: 0;
+            background-color: $primary;
+        }
+    }
+    
+    // RIGHT CONTENT
+    
+    &__right {
+        height: 100vh;
+        width: 40%;
+        float: right;
+        background-color: azure;
+        background-image: url(../img/superhero01.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    // OVERLAY CONTENT
+    
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+        right: 18vw;
+        width: 24vw;
+        height: 25rem;
+        background-color: $bg-lt;
+        transition: width .5s ease, height .75s ease .4s, right .5s ease;
+        z-index: 600;
+        
+        @include respond(tab-port) {
+            right: 30vw;
+            bottom: 0;
+            height: 20vh;
+            width: 70vw;
+        }
+        
+        @include respond(phone) {
+            right:0;
+            bottom: 0;
+            height: 30vh;
+            width: 65vw;
+        }
+        
+        &-min {
+            padding: 4rem 0 0 8rem;
+            
+            @include respond(desktop) {
+                padding: 4rem 4rem 0 4rem;
+            }
+            
+            h2 {
+                font-weight: 600;
+                font-size: 1.4rem;
+                letter-spacing: .1rem;
+                
+                &:nth-child(3) {
+                    @include respondY(zoom) {
+                        display: none;
+                    }
+                }
+            }
+            
+            p {
+                font-size: 80%;
+                letter-spacing: .1rem;
+                margin-bottom: 2.5rem;
+                
+                &:last-child {
+                    @include respondY(zoom) {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+        
+        &-max {
+            display: none;
+            
+            &-video {
+                display: block;
+                float: left;
+                width: 60%;
+                height: 100vh;
+                position: relative;
+                
+                video {
+                    width: 85%;
+                    @include centerBox;
+                    
+                    @include respond(tab-port) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        transform: translate(0);
+                        margin: 15rem auto 6rem auto;;
+                        display: block;
+                    }
+                    
+                }
+                
+                &-button {
+                    display: block;
+                    border: none;
+                    height: 9rem;
+                    width: 9rem;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    position: absolute;
+                    @include centerBox;
+                    cursor: pointer;
+                    transition: $quick;
+                    
+                    &::after {
+                        content: '';
+                        display: block;
+                        @include centerBox;
+                        height: 9rem;
+                        width: 9rem;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        border: 3px solid $primary;
+                        transition: $quick;
+                    }
+                    
+                    &:hover {
+                        height: 8rem;
+                        width: 8rem;
+                        
+                        &::after {
+                            height: 10rem;
+                            width: 10rem;
+                        }
+                    }
+                    
+                    i {
+                        font-size: 4rem;
+                        color: $primary-dk-3;
+                    }
+                }
+                
+                @include respond(tab-port) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            &-right {
+                float: right;
+                width: 40%;
+                height: 100vh;
+                position: relative;
+                
+                @include respond(tab-port) {
+                    height: auto;
+                    width: 100%;
+                }
+                
+                &-content {
+                    width: 75%;
+                    position: absolute;
+                    top: 50%;
+                    left: 10%;
+                    transform: translateY(-50%);
+                    
+                    @include respond(tab-port) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        transform: translateY(0);
+                        margin: 0 auto;
+                    }
+                    
+                    h2 {
+                        text-transform: uppercase;
+                        letter-spacing: .75rem;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    p {
+                        letter-spacing: .1rem;
+                        font-size: 1.5rem;
+                        line-height: 3rem;
+                        
+                        &:not(:last-child) {
+                            margin-bottom: 4rem;
+                        }
+                        
+                        &:last-child {
+                            @include respond(tab-port) {
+                                padding-bottom: 8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    // SUPERHERO CHECKBOX
+    
+    &__checkbox {
+        display: none;
+    }
+    
+    &__toggle {
+        
+        &-expand {
+            margin-left: 8rem;
+            display: block;
+            position: relative;
+            font-size: 1.2rem;
+            transition: all .8s;
+            
+            @include respond(desktop) {
+                margin: 0 4rem;
+            }
+        }
+        
+        .btn-text {
+            font-size: 1.3rem;
+            
+            @include respond(desktop) {
+                font-size: 1.2rem;
+                letter-spacing: .5rem;
+            }
+        }
+        
+        &-collapse {
+            display: block;
+            height: 6rem;
+            width: 6rem;
+            position: absolute;
+            top: 4rem;
+            right: 8rem;
+            border: 2px solid $gray-dk-3;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0);
+            transition: $smooth;
+            z-index: 1000;
+            
+            @include respond(tab-port){
+                top: 2.5rem;
+                right:2.5rem;
+            }
+            
+            @include respond(phone){
+                top: 2rem;
+                right:2rem;
+            }
+            
+            &-inner {
+                @include centerBox;
+                background-color: transparent;
+                
+                &,
+                &::before,
+                &::after {
+                    width:3rem;
+                    height:2px;
+                    display: inline-block;
+                    transition:$quick;
+                }
+                
+                &::before,
+                &::after {
+                    content: '';
+                    background-color: $gray-dk-3;
+                    position: absolute;
+                    top: 0;
+                    
+                }
+                
+                &::before {
+                    transform: rotate(135deg);
+                }
+                
+                &::after {
+                    transform: rotate(-135deg);
+                }
+            }
+            
+            &:hover {
+                .superhero__toggle-collapse-inner {
+                    &::before {
+                        transform: rotate(0);
+                    }
+
+                    &::after {
+                        transform: rotate(0);
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+    
+    // FUNCTIONALITY
+    
+    &__checkbox:checked ~ &__overlay {
+        height: 100vh;
+        width: 100vw;
+        right: 0;
+        z-index: 10000;
+        overflow-y: scroll;
+        
+        @include respond(tab-port) {
+            bottom: 0;
+        }
+    }
+    
+    &__checkbox:checked ~ &__overlay &__toggle {
+        
+        &-collapse {
+            opacity: 1;
+            transform: scale(1);
+            @include respond(phone) {
+                position: fixed;
+            }
+        }
+        
+        &-expand {
+            opacity: 0;
+            transform: scale(0) translate(-100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+    }
+    
+}

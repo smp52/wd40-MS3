@@ -1,0 +1,59 @@
+.login {
+    margin: 0  15rem 0 25rem;
+    //background-color: blue;
+    height:100vh;
+    @include clearfix;
+    
+    &__img {
+        width: 45%;
+        float: left;
+        position: relative; 
+        height: 100vh;
+        
+        img {
+            display: block;
+            width: calc((100vw - 25rem - 15rem) * .45 * .65);
+            @include centerBox;
+        }
+        
+        &-box {
+            width: calc((100vw - 25rem - 15rem) * .45 * .65);
+            height: calc((100vw - 25rem - 15rem) * .45 * .65 * (4 / 3));
+            //background-color: olivedrab;
+            border: .5rem solid $primary;
+            position: absolute;
+            top: calc(50% - 5rem);
+            left: calc(50% + 5rem);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            //top: calc(100% - ((100vw - 25rem - 15rem) * .45 * .65 * (4 / 3) * 1.5));
+            //eft: calc(((100vw - 25rem - 15rem) * .45) - ((100vw - 25rem - 15rem) * .45 * .65));
+        }
+    }
+    
+    &__form {
+        width: 55%;
+        height: 100vh;
+        float: left;
+        position: relative;
+        
+        h2 {
+            color: $primary;
+        }
+        
+        form {
+            width: 65%;
+            @include centerBox;
+            top: 45%;
+            
+            button {
+                color: $primary;
+                background-color: transparent;
+                
+                &:hover {
+                    color:$primary-dk;
+                }
+            }
+        }
+    }
+}

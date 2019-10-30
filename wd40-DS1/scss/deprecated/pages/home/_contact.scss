@@ -1,0 +1,100 @@
+.contact-us {
+    //margin: 0  15rem 0 25rem;
+    //background-color: blue;
+    height:100vh;
+    //@include clearfix;
+    
+    .row {
+        display: grid;
+        grid-template-columns: auto 60%;
+        grid-gap: 10%;
+        
+        @include respond(tab-port){
+            grid-template-columns: auto;
+        }
+    }
+    
+    &__img {
+        
+        position: relative; 
+        height: 100vh;
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+        
+        img {
+            display: block;
+            width: calc((100vw - 25rem - 15rem) * .45 * .65);
+            @include centerBox;
+        }
+        
+        &-box {
+            width: calc((100vw - 25rem - 15rem) * .45 * .65);
+            height: calc((100vw - 25rem - 15rem) * .45 * .65 * (4 / 3));
+            //background-color: olivedrab;
+            border: .5rem solid $primary;
+            position: absolute;
+            top: calc(50% - 5rem);
+            left: calc(50% + 5rem);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            //top: calc(100% - ((100vw - 25rem - 15rem) * .45 * .65 * (4 / 3) * 1.5));
+            //eft: calc(((100vw - 25rem - 15rem) * .45) - ((100vw - 25rem - 15rem) * .45 * .65));
+        }
+    }
+    
+    &__form {  
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h2 {
+            color: $primary;
+        }
+        
+        form {
+            width: 65%;
+            
+            @include respond(phone) {
+                width: 90%;
+            }
+            
+            button {
+                color: $primary;
+                background-color: transparent;
+                
+                &:hover {
+                    color:$primary-dk;
+                }
+            }
+        }
+    }
+    
+    &__heading {
+        margin-bottom: 3rem;
+        font-size: $font-md;
+        letter-spacing: 1.5rem;
+        
+        @include respond(phone){
+            letter-spacing: .75rem;
+        }
+
+        &,
+        &-sub {
+            text-transform: uppercase;
+        }
+
+        &-sub {
+            font-weight: 700;
+            font-size: 80%;
+            letter-spacing: 1rem;
+            
+            @include respond(phone) {
+                letter-spacing: .4rem;
+            }
+        }
+    }
+}

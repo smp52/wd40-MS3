@@ -1,0 +1,29 @@
+@keyframes loadingSpinner {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.15);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes backgroundColorShift {
+    0% {
+        background-color: $gray-dk-3;
+    }
+    25% {
+        background-color: $black;
+    }
+    50% {
+        background-color: $gray-dk-3;
+    }
+    75% {
+        background-color: $black;
+    }
+    100% {
+        background-color: $gray-dk-3;
+    }
+}

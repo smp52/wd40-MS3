@@ -1,0 +1,167 @@
+.btn {
+    background-color: transparent;
+    border: 2px solid;
+    //border-radius: 10rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    padding: 1rem 3rem;
+    transition: all .6s;
+    
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+    
+    &:hover {
+        span {
+            padding-left: 3rem;
+        }
+    }
+    
+    span {
+        padding-left: 2rem;
+        transition: all .6s;
+    }
+    
+    &-text {
+        border: none;
+        font-family: $heading-font;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-weight: bold;
+        transition: $normal;
+        cursor: pointer;
+    }
+    
+    &--cir {
+        border-radius: 50%;
+        border: none;
+        display: block;
+        height: 6rem;
+        width: 6rem;
+        position: relative;
+        padding:0;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top:0;
+            left:0;
+            border-radius: 50%;
+            height:100%;
+            width: 100%;
+            background-color: transparent; 
+            border-right: 2px solid $white;
+            border-left: 2px solid $white;
+            border-top: 2px solid $white;
+            border-bottom: 2px solid $white;
+            transition: $normal;
+        }
+        
+        
+        &:hover::before,
+        &:active::before {
+            //border-color: $primary;
+            border-right: 2px solid $primary;
+            border-left: 2px solid rgba($white, .3);
+            border-top: 2px solid rgba($white, .3);
+            border-bottom: 2px solid rgba($white, .3);
+            transform: rotate(360deg);
+        }
+        
+        &:hover {
+            a {
+                &,
+                &:link,
+                &:visited {
+                    color: $white;
+                }
+            }
+        }
+        
+        i {
+            display: block;
+            font-size: 32px;
+            @include centerBox;
+            color:$white;
+        }
+    }
+    
+    &--primary {
+        border-color: $primary;
+        
+        &,
+        &:link,
+        &:visited {
+            color: $primary;
+        }
+        
+        &:hover {
+            border-color: $primary-dk;
+        }
+    }
+    
+    &--dk {
+        border-color: $gray-dk-3;
+        
+        &,
+        &:link,
+        &:visited {
+            color: $gray-dk-3;
+        }
+        
+        &:hover {
+            border-color: $primary;
+        }
+    } 
+    
+    &--lt {
+        border-color: $white;
+        
+        &,
+        &:link,
+        &:visited {
+            color: $white;
+        }
+        
+        &:hover {
+            border-color: $primary;
+        }
+    }
+    
+    
+    &__scroll {
+        display: block;
+        height: 7rem;
+        width: 4rem;
+        border: 2px solid;
+        border-color: $gray-dk-3;
+        border-radius: 10rem;
+        position: relative;
+        transition: $normal;
+        
+        &:hover {
+            border-color: $primary;
+            
+            .btn__scroll__icon {
+                background-color: $primary;
+            }
+        }
+        
+        &__icon {
+            display: block;
+            height: 2rem;
+            width: 3px;
+            background-color: $gray-dk-3;
+            position: absolute;
+            left: 50%;
+            top: 1rem;
+            transform: translateX(-50%);
+            animation: mouseScrollIcon 4s ease infinite;
+            transition: $normal;
+        }
+    }
+}

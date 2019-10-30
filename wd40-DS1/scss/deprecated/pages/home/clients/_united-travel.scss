@@ -1,0 +1,106 @@
+.united-travel {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include clearfix;
+}
+
+.united-travel .client {
+    &__info {
+        
+        &-content {
+            
+            &-title {
+                color: $united-travel;
+            }
+            
+            .btn-text {
+                &,
+                &:link,
+                &:visited {
+                    color: $united-travel;
+                }
+                
+                &:hover {
+                    color: $united-travel;
+                }
+            }
+        }
+        
+            .scroll-icon {
+
+                &:hover {
+                    .scroll-icon__mouse {
+
+                        border-color: $united-travel;
+
+                        &-inner {
+                            background-color: $united-travel;
+                        }
+
+                    }
+
+                    .scroll-icon__text {
+                        color: $united-travel;
+                        //opacity: 1;
+                    }
+
+                }
+
+            }
+    }
+    
+    &__image {
+        background-image: url(../img/united-bg.jpg);
+        float: right;
+        
+        @include respond(tab-port) {
+            background-image: url(../img/united-bg-m.jpg);
+        }
+    }
+    
+    &__logo {
+        left: calc(60vw - 7.5vw);
+        top:0;
+        height: 100vh;
+        
+        @include respond(tab-port) {
+            height: 35vw;
+            width: 50vw;
+            top: calc(30vh - (35vw / 2));
+            left: 25vw;
+        }
+        
+        @include respond(iphone) {
+            height: 25vw;
+            top: calc(25vh - (25vw / 2));
+        }
+        
+        h2 {
+            font-size: 16rem;
+            font-weight: 600;
+            color: $united-travel;
+            letter-spacing: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            @include respond(tab-port) {
+                transform: none;
+                font-size: 12rem;
+                top: 0;
+                left: 0;
+                position: relative;
+                line-height: 35vw;
+                width: 100%;
+                text-align: center;
+            }
+            
+            @include respond(iphone) {
+                line-height: 25vw;
+                font-size: 8rem;
+            }
+        }
+    }
+}

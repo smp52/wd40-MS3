@@ -1,0 +1,17 @@
+.touch-cursor {
+    position:absolute;
+    height: 4rem;
+    width: 4rem;
+    background-color: transparent;
+    z-index: 100000000;
+    border-radius: 50%;
+    border: 2px solid #222; 
+    opacity: 0;
+    transition: top .1s, left .1s, transform .4s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    
+    @include respond(tab-port) {
+        display: none;
+    }
+}

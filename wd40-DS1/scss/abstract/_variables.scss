@@ -1,0 +1,72 @@
+// Primary Colors
+$primary: #0d3045;
+$primary-lt: #dae6e3;
+$primary-dk: #6FAAA3;
+$primary-dk-2: #5C8B8E;
+$primary-dk-3: #3D5B66;
+$primary-dk-4: #1d292e;
+
+// Secondary Colors
+$secondary-lt: #ffb900;
+$secondary-dk: #ff7730;
+
+// Tertiary Colors
+$tertiary-lt: #2998ff;
+$tertiary-dk: #5643fa;
+
+// Gradient Colors
+$gradient1: #aedcb6;
+$gradient2: #2dbbcc;
+$gradient3: #93c252;
+$gradient4: #3f8daa;
+
+// Shades of Gray
+$white: #fff;
+$gray-lt-1: #f7f7f7;
+$gray-lt-2: #eee;
+$gray-lt-3:#afafaf;
+$gray-dk-1: #777;
+$gray-dk-2: #999;
+$gray-dk-3: #333;
+$gray-dk-4: #222;
+$black: #000;
+
+// Theme Colors
+$skware: #807d69;
+$skware-2: #bbb79f;
+$united-travel: #376bb0;
+$xyz-shopping: #f68e56;
+$codepremi: #db3545;
+$df5: #7b6c74;
+$lifelink: #4285f4;
+$lifelink-2: #3eb677;
+
+// Background Colors
+$bgcolor: #222;
+$bg-dk: #333;
+$bg-lt: #dae6e3;
+
+// Font Variables
+$default-font-size: 1.6rem;
+$font-xl: 5rem;
+$font-lg: 4rem;
+$font-md: 3rem;
+$font-sm: 2.5rem;
+$font-xs:2rem;
+$font-xxs:1.5rem;
+$heading-font:'Nunito Sans', sans-serif;
+$body-font:'Nunito Sans', sans-serif;
+
+// Transition Speeds
+$quick: all .3s;
+$normal: all .5s;
+$smooth: all 1s;
+$extra-smooth: all 1.5s;
+
+//Grid Variables
+$grid-width:114rem;
+$grid-xl-width: 155rem;
+$gutter-y: 6rem;
+$gutter-min-y: 3rem;
+$gutter-x: 6rem;
+$gutter-min-x: 3rem;

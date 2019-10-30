@@ -1,0 +1,188 @@
+.timeline {
+    position: relative;
+    @include clearfix;
+    overflow: hidden;
+    max-width: 120rem;
+    margin: 0 auto;
+    
+    &__container {
+        padding: 12rem 0;
+        background-image: url(../img/timeline-bgdk.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        
+        @include respondY(zoom) {
+            padding: 12rem 16rem;
+        }
+    }
+
+    &__line {
+        height:100%;
+        width:.3rem;
+        background-color: rgba($white, .4);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        
+        @include respond(phone) {
+            left: 3rem;
+        }
+    }
+    
+    &__title {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 4rem;
+        width: 100%;
+        float: left;
+        
+        @include respond(phone) {
+            text-align: left;
+        }
+        
+        &:hover h2 {
+            transform: translateX(-10%);
+        }
+        
+        h2 {
+            color: $white;
+            display: inline-block;
+            background-color: $primary;
+            padding: 1rem 3rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: .4rem;
+            //border-radius: 500px;
+            transition: all .7s;
+        }
+    }
+    
+    &__item {
+        position:relative;
+        width:50%;
+        clear: both;
+        transition:all .7s;
+        z-index: 2;
+        
+        h2 {
+            color: $white;
+            text-transform: uppercase;
+            font-size: $font-xs;
+            letter-spacing: .3rem
+        }
+        
+        p {
+            color: $white;
+        }
+        
+        @include respond(phone) {
+            width:100%;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+        
+        &:hover {
+            transform: translateY(-1rem);
+        }
+    }
+    
+    &__item:nth-child(odd) {
+        float:right;
+        text-align: left;
+        padding-left: 8rem;
+        
+        @include respond(phone) {
+            padding-left:8rem;
+        }
+        
+        .timeline__icon {
+            left:0;
+            transform: translateX(-50%);  
+            
+            @include respond(phone) {
+                transform: translateX(0);
+            }
+        }
+    }
+    
+    &__item:nth-child(even) {
+        float:left;
+        text-align: right;
+        padding-right: 8rem;
+        
+        @include respond(phone) {
+            text-align: left;
+            padding-right: 0;
+            padding-left: 8rem;
+        }
+        
+        .timeline__icon {
+            right:0;
+            transform: translateX(50%);
+            
+            @include respond(phone) {
+                left:0;
+                transform:translateX(0);
+            }
+        }
+    }
+    
+    & .animate {
+        
+        &:nth-child(odd) {
+            //opacity: .5;
+            animation: timelineRight .7s ease-in;
+            
+        }
+        
+        &:nth-child(even) {
+            animation: timelineLeft .7s ease-in;
+            
+            @include respond(phone) {
+                animation: timelineRight .7s ease-in;
+            }
+        }
+    }
+    
+    &__icon {
+        top:20%;
+        position: absolute;
+        height:6rem;
+        width:6rem;
+        border-radius: 50%;
+        background-color: $primary;
+        transition: all .5s;
+        z-index: 2;
+        
+        i {
+            @include centerBox;
+            color:$white;
+        }
+    }
+    
+    &__year {
+        color:rgba($white, .7);
+        margin-bottom: 1rem;
+        
+        a {
+            transition: all .3s;
+            &:link,
+            &:active,
+            &:visited {
+                color: $primary;
+                text-decoration: none;
+            }
+
+            &:hover {
+                color:$primary-dk;
+            }
+        }
+    }
+}
+/* _____ END SECTION TIMELINE */

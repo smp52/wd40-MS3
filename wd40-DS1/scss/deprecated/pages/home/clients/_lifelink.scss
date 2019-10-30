@@ -1,0 +1,83 @@
+.lifelink {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include clearfix;
+}
+
+.lifelink .client {
+    &__info {
+        
+        &-content {
+            
+            &-title {
+                color: $lifelink;
+                
+                span {
+                    color: $lifelink-2;
+                }
+            }
+            
+            .btn-text {
+                &,
+                &:link,
+                &:visited {
+                    color: $lifelink;
+                }
+                
+                &:hover {
+                    color: $lifelink-2;
+                }
+            }
+        }
+        
+            .scroll-icon {
+                
+                &:hover {
+                    .scroll-icon__mouse {
+
+                        border-color: $lifelink-2;
+
+                        &-inner {
+                            background-color: $lifelink-2;
+                        }
+
+                    }
+
+                    .scroll-icon__text {
+                        color: $primary;
+                        //opacity: 1;
+                    }
+
+                }
+
+            }
+    }
+    
+    &__image {
+        float: right;
+        background-image: url(../img/lifelink-bg.jpg);
+        
+        @include respond(phone) {
+            background-image: url(../img/lifelink-bg-m.jpg);
+        }
+    }
+    
+    &__logo {
+        left: calc(60vw - 7.5vw);
+        
+        @include respond(tab-port) {
+            width: 35vw;
+            height: 35vw;
+            top: calc(30vh - (35vw / 2));
+            left: calc(50vw - (35vw / 2));
+        }
+        
+        @include respond(iphone) {
+            width: 25vw;
+            height: 25vw;
+            top: calc(25vh - (25vw / 2));
+            left: calc(50vw - (25vw / 2));
+        }
+    }
+}

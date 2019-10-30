@@ -1,0 +1,25 @@
+.footer {
+    position: relative;
+    text-align: center;
+    background-color: $white;
+    
+    &__container {
+        padding: 10rem 5rem;
+        z-index: 10;
+        position: relative;
+    }
+    
+    &__block {
+        height: 100%;
+        width: 33vw;
+        background-color: $bg-dk;
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 0;
+    }
+    
+    @include respondY(zoom) {
+        padding: 12rem 16rem;
+    }
+}

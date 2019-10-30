@@ -1,0 +1,48 @@
+.news {
+    
+    height: 70vh;
+    width: 30vw;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15vw);
+    text-align: center;
+    padding: 3rem;
+    border-right: 3px solid $gray-dk-3;
+    border-left: 3px solid $gray-dk-3;
+    
+    &__image {
+        
+        max-height: 15rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    &__title {
+        
+        margin-bottom: 2rem;
+        
+    }
+    
+    &__heading {
+        font-size: 150%;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        margin-bottom: 2rem;
+    }
+    
+    &__link {
+        
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        
+    }
+    
+    div {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+    &::-webkit-scrollbar { width: 0 !important }
+    
+}
