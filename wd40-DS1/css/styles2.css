@@ -777,6 +777,7 @@ input[type="textarea"] {
 }
 
 .link {
-    color: blue;
-    text-decoration: underline;
+    color: #FFA36B;
+    padding: 5px;
+    background-color: #603960;
 }
