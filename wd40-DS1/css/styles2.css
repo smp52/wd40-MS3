@@ -676,11 +676,10 @@ input[type="textarea"] {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
+  border: 5px solid #603960;
   text-align: left;
   outline: none;
   font-size: 15px;
-  margin: 5px;
 }
 
 .active, .collapsible:hover {
