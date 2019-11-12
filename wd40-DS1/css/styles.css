@@ -297,11 +297,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.link {
-    color: blue;
-    text-decoration: underline;
-}
-
 footer {
     height: 80px;
     background-color: white;

@@ -775,3 +775,8 @@ input[type="textarea"] {
     padding-top: 0%;
     background-color: ;
 }
+
+.link {
+    color: blue;
+    text-decoration: underline;
+}
