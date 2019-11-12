@@ -676,7 +676,7 @@ input[type="textarea"] {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: 5px solid #FFA36B;
+  border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
