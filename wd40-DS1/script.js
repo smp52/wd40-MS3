@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 $('#newFilter').click(function(e) {
 var y = document.getElementById('newFilter');
