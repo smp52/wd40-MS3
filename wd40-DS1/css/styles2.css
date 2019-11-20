@@ -34,9 +34,8 @@ sub { vertical-align: text-bottom; }
     text-align:center;
 }
 .header{
-    background-color: ;
+    background-color:;
     position: relative;
-    height: 11vh;
     margin-bottom: 6%;
 }
 
@@ -169,24 +168,23 @@ body {
 }
 
 #home .module {
-  background-image:url("https://s3.amazonaws.com/filestore.rescuegroups.org/8569/pictures/animals/14696/14696131/67543922_500x378.jpg");
-  background-size: cover;
-  width: 50%;
-  height: 500px;
   position: relative;
   float: right;
-  margin-top: 2%;
+  margin-top: ;
   margin-right: 20px;
+  background-color: aqua;
 
 }
 
 
 #contentsection1 {
-    background-color: ;
-    width: 44.5%;
     float: right;
-    margin-top: 3.5%;
+    margin-top: ;
     margin-right: 0px;
+    background-color: red;
+}
+#adoptSection{
+    background-color: yellow;
 }
 
 .slideshow-container {
@@ -643,6 +641,7 @@ input[type="textarea"] {
 }
 
 .section1{
+    width: 10%;
     height: 100%;
     background-color:;
     position: relative;
